@@ -1,5 +1,5 @@
-### clique-based-inter-events
-# schematic view of the pipeline
+# clique-based-inter-events
+## schematic view of the pipeline
 ![schematic](schematic.png)
 
 Exhaustive capture of biological variation in RNA-seq data through k-mer decomposition (article: https://doi.org/10.1186/s13059-017-1372-2, pre-print: http://biorxiv.org/content/early/2017/06/02/122937).
