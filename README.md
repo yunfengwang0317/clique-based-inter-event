@@ -30,8 +30,9 @@ The Detector relies on the following python libraries:
     dkpl annot -i test_index toy/dkpl-run/merged-diff-counts.tsv.gz
     ```
 
-- **Step 3: Extract shared events**. We ran this pipeline using the DEkupl annotation outputs from two datasets as input. Then we can compare the consistency between two datasets from contig's level.
+- **Step 3: Extract shared events**. We run this pipeline using the DEkupl annotation outputs from two datasets as input. Then we can compare the consistency between two datasets from contig's level.
     ```
+    cd bin;g++ interSeqGraph.cpp -o interSeqGraph
     python3 clique_based_interevents.py DiffContig_cohort1 DiffContig_cohort2 outdir kmer_size
     ```
 ## Input
