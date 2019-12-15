@@ -29,7 +29,7 @@ def find_cliques():
     wd=os.path.dirname(sys.argv[0])
     if wd=='':wd+='./'
     else:wd+='/'
-    subprocess.call("./interSeqGraph -k %s -n -A %s -B %s > %s/pairs_contigs.txt 2>/dev/null"%(ksize,'%s/contig_dataset1.fa'%outdir,'%s/contig_dataset2.fa'%outdir,outdir),shell=True)
+    subprocess.call(wd+"interSeqGraph -k %s -n -A %s -B %s > %s/pairs_contigs.txt 2>/dev/null"%(ksize,'%s/contig_dataset1.fa'%outdir,'%s/contig_dataset2.fa'%outdir,outdir),shell=True)
     dat=pd.read_csv('%s/pairs_contigs.txt'%outdir,header=0,index_col=None,sep='\t')
     dat['A_L']=dat['contig_in_A'].apply(func,1)
     dat['B_L']=dat['contig_in_B'].apply(func,1)
